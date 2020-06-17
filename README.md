@@ -1,5 +1,6 @@
 # Yauth
 
+Following thoughtbot [tutorial](https://thoughtbot.com/blog/authentication-in-elixir-web-applications-with-guardian-part-1)
 Create new Phoenix app with `mix phx.new yauth`
 
 To start your Phoenix server:

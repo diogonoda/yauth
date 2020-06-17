@@ -12,11 +12,17 @@ config :yauth, Yauth.Repo,
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
 
-# We don't run a server during test. If one is required,
-# you can enable the server option below.
+# Ensure that the Phoenix Endpoint is running as a server during tests
 config :yauth, YauthWeb.Endpoint,
   http: [port: 4002],
-  server: false
+  server: true
 
 # Print only warnings and errors during test
 config :logger, level: :warn
+
+# Set the database to use the sandbox mode to allow for concurrent testing
+config :yauth, :sql_sandbox, true
+
+# Indicate which browser driver to use
+config :wallaby,
+  driver: Wallaby.Experimental.Chrome
