@@ -17,6 +17,8 @@ defmodule YauthWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+    get "/register", RegistrationController, :new
+    get "/login", SessionController, :new
   end
 
   # Other scopes may use custom stacks.
